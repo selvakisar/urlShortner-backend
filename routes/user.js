@@ -87,7 +87,7 @@ router.post("/forget",async(req,res)=>{
         const resetToken = Math.random().toString(36).substring(2,5);
 
         const resetLink =
-        `http://localhost:8888/users/reset/?token=${resetToken}`;
+        `nanoohurl.netlify.app/users/reset/?token=${resetToken}`;
 
         user.resetToken=resetToken;
 
