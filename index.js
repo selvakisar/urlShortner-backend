@@ -21,8 +21,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 
-
-app.use(cors())
+const corsOptions = {
+    origin: 'http://localhost:3000', // Replace with your allowed origin
+    optionsSuccessStatus: 200, // Some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
+app.use(cors(corsOptions))
 
 
 app.use("/users",userRouter)
