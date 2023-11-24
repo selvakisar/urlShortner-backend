@@ -25,8 +25,8 @@ router.get("/all",async (req, res) => {
 
 router.post("/short",async (req, res) => {
     console.log("HERE",req.body.url);
-    const  origUrl  = req.body;
-    const base = `https://nanourl.onrender.com/url`;
+    const  {origUrl}  = req.body
+    const base = `http://localhost:8888/url`;
   
     const urlId = shortid.generate();
     if (utils.validateUrl(origUrl)) {

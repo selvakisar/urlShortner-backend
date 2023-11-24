@@ -1,7 +1,7 @@
 import  express  from "express";
 import   bcrypt from "bcrypt"; 
 import nodemailer from "nodemailer";
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 dotenv.config();
 const router=express.Router();
 import { User, generateToken } from "../models/user.js";

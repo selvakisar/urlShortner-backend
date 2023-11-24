@@ -15,7 +15,6 @@ const UrlSchema = new mongoose.Schema({
     },
     clicks: {
       type: Number,
-      required: true,
       default: null,
     },
     date: {
