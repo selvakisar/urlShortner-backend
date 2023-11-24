@@ -10,9 +10,10 @@ dotenv.config()
 
 router.get("/all",async (req, res) => {
    try {
-    const urls =await Url.find({},'shortUrl');
-    const shortUrls =urls.map(url =>url.shortUrl);
-    res.status(200).json(shortUrls);
+    const urls =await Url.find({});
+    // const  =urls.map(url =>url.shortUrl);
+    const Urls=urls.map((urls,index)=>urls)
+    res.status(200).json(Urls);
    } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error occurd' });
