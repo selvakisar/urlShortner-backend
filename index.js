@@ -26,11 +26,8 @@ app.use((req, res, next) => {
     next();
 })
 
-const corsOptions = {
-    origin: 'https://nanourl.onrender.com', // Replace with your allowed origin
-    optionsSuccessStatus: 200, // Some legacy browsers (IE11, various SmartTVs) choke on 204
-  }
-app.use(cors(corsOptions))
+
+app.use(cors())
 
 
 app.use("/users",userRouter)

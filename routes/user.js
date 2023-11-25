@@ -59,8 +59,8 @@ const validatePassword = await bcrypt.compare(
 
     // genrate token
 const token = generateToken(user._id);
-
 res.status(200).send({message:"sucessfully loged in",token})
+console.log ("success:"+(token));
 
 
 } catch (error) {
